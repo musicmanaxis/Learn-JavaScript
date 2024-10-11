@@ -1,20 +1,20 @@
-let items = document.getElementsByClassName('item');
+let items = document.getElementsByClassName('item');  //클래스 이름이 동일한게 여러개 있을 때
 console.log(items);
-console.log('스쿼트: ', items[0]);
+console.log('스쿼트: ', items[0]);   //첫번째거 가져오기..마치 배열처럼
 console.log('벤치프레스: ', items[1]);
 console.log('데드리프트: ', items[2]);
 
-let liList = document.getElementsByTagName('li');
+let liList = document.getElementsByTagName('li');   //태그 명으로 찾기
 console.log(liList);
 
 // 2] HTML 요소 쿼리
-let h2 = document.querySelector('#title');
+let h2 = document.querySelector('#title');  //id가 title인것을 가져오기 
 console.log('h2: ', h2);
 
-let item = document.querySelector('.item');
+let item = document.querySelector('.item');   //클래스가 item인것을 가져오기 단, 동일한 클래스이름으로 여러개 있엇도 맨위 하나만 가져온다.
 console.log('query item: ', item);
 
-let itemAll = document.querySelectorAll('.item');
+let itemAll = document.querySelectorAll('.item');  //동일한 클래스이름이 여러개인경우 querySelectorAll를 사용하면 이런식으로 모두 가져온다.
 console.log('itemAll: ', itemAll);
 console.log('itemAll[0]: ', itemAll[0]);
 console.log('itemAll[1]: ', itemAll[1]);
