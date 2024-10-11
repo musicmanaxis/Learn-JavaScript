@@ -1,2 +1,4 @@
 console.log("hello java");
-document.getElementById
+let title=document.getElementById('title');
+console.log(title);
+title.textContent='헬스 3대운동';
