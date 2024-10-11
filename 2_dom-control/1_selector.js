@@ -20,18 +20,18 @@ console.log('itemAll[0]: ', itemAll[0]);
 console.log('itemAll[1]: ', itemAll[1]);
 console.log('itemAll[2]: ', itemAll[2]);
 
-h2.textContent ='운동!!';  //h2테그의 내용을 이런식으로 변경이 가능하다.
+h2.textContent ='운동!!';  //h2테그의 내용을 textContent이용하여 내용 변경이 가능하다.
 // h2.textContent = '<span>운동!!!</span>';   //span태그도 텍스트로 인식하여 태그마저 그대로 출력된다.
 // h2.innerHTML = '<span>운동@@@</span>';    //span태그는 태그로 인식하여 태그를 제외한 텍스트가 출력된다.
 
-// document.querySelector('body').innerHTML = '<strong>운동</strong>';
+// document.querySelector('body').innerHTML = '><strong>운동</strong';  //body안에 태그들이 다 사라진다.<strong>운동</strong>만 남음
 
 let input = document.querySelector('input');  //input 태그에 해당하는 모든 내용을 가져오고...
 input.setAttribute('placeholder', '헬스 운동을 입력해주세요!');   //input태그가 가지고 있는 placeholder속성에 값을 다른것으로 변경
 input.setAttribute('required', '');
 input.removeAttribute('placeholder');  //속성삭제
 input.removeAttribute('required');
-// input
+// 개인의견:연습해보니 querySelector()를 사용하는 것이 좋아보임, querySelector(태그명), querySelector(.클래스명), querySelector(#아이디명)
 
 
 //HTML 요소 스타일링
