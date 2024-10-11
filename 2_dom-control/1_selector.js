@@ -26,8 +26,8 @@ h2.textContent ='운동!!';  //h2테그의 내용을 이런식으로 변경이 �
 
 // document.querySelector('body').innerHTML = '<strong>운동</strong>';
 
-let input = document.querySelector('input');  //input 태그를 가져오고...
-input.setAttribute('placeholder', '헬스 운동을 입력해주세요!');   //input태그에 placeholder속성을 가져오서 값을 다른것으로 변경
+let input = document.querySelector('input');  //input 태그에 해당하는 모든 내용을 가져오고...
+input.setAttribute('placeholder', '헬스 운동을 입력해주세요!');   //input태그가 가지고 있는 placeholder속성에 값을 다른것으로 변경
 input.setAttribute('required', '');
 input.removeAttribute('placeholder');  //속성삭제
 input.removeAttribute('required');
