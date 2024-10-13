@@ -15,14 +15,15 @@ let item = document.querySelector('.item');   //클래스가 item인것을 가�
 console.log('query item: ', item);
 
 let itemAll = document.querySelectorAll('.item');  //동일한 클래스이름이 여러개인경우 querySelectorAll를 사용하면 이런식으로 모두 가져온다.
-console.log('itemAll: ', itemAll);
+console.log('itemAll: ', itemAll);   //item클래스중에서 맨위의것만 가져온다. 하위것들을 가져올려면 아래처럼 인덱스를 사용
 console.log('itemAll[0]: ', itemAll[0]);
 console.log('itemAll[1]: ', itemAll[1]);
 console.log('itemAll[2]: ', itemAll[2]);
 
-h2.textContent ='운동!!';  //h2테그의 내용을 textContent이용하여 내용 변경이 가능하다.
-// h2.textContent = '<span>운동!!!</span>';   //span태그도 텍스트로 인식하여 태그마저 그대로 출력된다.
-// h2.innerHTML = '<span>운동@@@</span>';    //span태그는 태그로 인식하여 태그를 제외한 텍스트가 출력된다.
+//h2.textContent ='운동!!';  //h2테그의 내용을 textContent이용하여 내용 변경이 가능하다.
+ //h2.textContent = '<span>운동!!!</span>';   //span태그도 텍스트로 인식하여 태그마저 그대로 출력된다.
+ h2.innerHTML = '<span>운동@@@</span>';    //span태그는 태그로 인식하여 태그를 제외한 텍스트가 출력된다.
+console.log('h2!!:', h2);
 
 // document.querySelector('body').innerHTML = '><strong>운동</strong';  //body안에 태그들이 다 사라진다.<strong>운동</strong>만 남음
 
