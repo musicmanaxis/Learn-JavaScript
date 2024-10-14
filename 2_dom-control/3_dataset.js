@@ -6,7 +6,7 @@ let h2=document.querySelector('h2');
 
  let liList=document.querySelectorAll('li');
  let img=document.querySelector('img');
- let selectedItem=document.querySelector('.selected-item');
+ let selectedItem=document.querySelector('.selected-item');  //리스트에서 과일을 선택하면 선택한 과일의 글자가 하단에 보이기 위한 용도
 
 liList[0].addEventListener('click', selectItem);  //selectItem는 함수이며 하단에 거기에 관한 것을 정의해놨다..
 liList[1].addEventListener('click', selectItem);
