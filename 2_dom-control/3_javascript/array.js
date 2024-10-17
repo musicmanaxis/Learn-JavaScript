@@ -44,27 +44,19 @@
 // console.log('index: ', index);
 
 // // splice()
-// const findIndex = fruits.indexOf('파인애플');
+// const findIndex = fruits.indexOf('파인애플');  //파인애플 제거하기 위해
 // console.log('findIndex: ', findIndex);
-// fruits.splice(findIndex, 1);               //제거하고 싶은 인데스 삽입
+// fruits.splice(findIndex, 1);               //findIndex:찾은 위치에서, 1->1개를 제거하라
 // console.log(fruits);
 
 // 3] 구조 분해 할당
 // let fruits = ['사과', '바나나', '딸기'];
 // // let apple = fruits[0];
 // // let banana = fruits[1];
-// // let strawberry = fruits[2];
+// // let strawberry = fruits[2];     //이런식으로 할당을 하면 비효율적  이것을 간단히 위헤...구조분해할당
 
-// let [apple, banana, strawberry, ...others] = [
-//   '사과',
-//   '바나나',
-//   '딸기',
-//   'a',
-//   'b',
-//   'c',
-//   'd',
-//   'e',
-// ];
+// let [apple, banana, strawberry] = ['사과', '바나나', '딸기'];  //이렇게...
+
 // console.log(apple);
 // console.log(banana);
 // console.log(strawberry);
@@ -73,30 +65,34 @@
 // 4] 전개 구문
 // let fruits1 = ['사과', '바나나', '딸기'];
 // let fruits2 = ['파인애플', '수박'];
-// let items = [...fruits1, ...fruits2];
+// let items = [...fruits1, ...fruits2];   //배열을 한번에 다른 배열식으로 할당하는 방법   ...세개 점을 찍으면 배열을 펼친다라는 의미 
 // console.log(items);
 
 // 5] Rest parameter
 // print('a', 'b', 'c', 'b', 'e', 'f');
 
-// function print(...values) {
+// function print(...values) {             
+     //print()의 매개변수에서 ...을 찍으면 인자가 몇개인지 알수 없을 때 맘데로 이용할수 있다.  ...변수는 배열이라는 의미
 //   // values.forEach(function (value, index) {
 //   //   console.log('index: ', index, 'value: ', value);
 //   // });
 // }
 
-// 얕은 복사(Shallow copy)
+
+//배열의 복사
+
+// 얕은 복사(Shallow copy)      
 // let source = ['사과', '바나나', '딸기'];
-// let target = source;
-// target[0] = '파인애플';
+// let target = source;   //주소값을 넘김
+// target[0] = '파인애플';   //주소값을 넘겼기 때문에 source[0]도 동일하게 파인애플로 변경이 되어 버린다. 
 // console.log('source: ', source);
 // console.log('target: ', target);
 
-// 깊은 복사(deep copy)
+// 깊은 복사(deep copy)  :위의 것을 극복하기 위해 이것을 실행한다. 3가지 방법이 있음..(1), (2), (3)
 let source = ['사과', '바나나', '딸기'];
-// let target = [...source];
-// let target = Array.from(source);
-let target = source.slice();
-target[0] = '파인애플';
+// let target = [...source];         //(1)  1.이것을 진행하고
+// let target = Array.from(source);  //(2)
+let target = source.slice();   //(3)
+target[0] = '파인애플';                      //2.이렇게 하면 source[0]값은 변경이 안된다.
 console.log('source: ', source);
 console.log('target: ', target);
