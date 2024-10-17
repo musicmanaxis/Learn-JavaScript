@@ -81,14 +81,14 @@
 
 //배열의 복사
 
-// 얕은 복사(Shallow copy)      
+// 얕은 복사(Shallow copy)   //주소값을 넘기는 방식 
 // let source = ['사과', '바나나', '딸기'];
 // let target = source;   //주소값을 넘김
 // target[0] = '파인애플';   //주소값을 넘겼기 때문에 source[0]도 동일하게 파인애플로 변경이 되어 버린다. 
 // console.log('source: ', source);
 // console.log('target: ', target);
 
-// 깊은 복사(deep copy)  :위의 것을 극복하기 위해 이것을 실행한다. 3가지 방법이 있음..(1), (2), (3)
+// 깊은 복사(deep copy)  :새로운 주소로 할당, 위의 것을 극복하기 위해 이것을 실행한다. 3가지 방법이 있음..(1), (2), (3)
 let source = ['사과', '바나나', '딸기'];
 // let target = [...source];         //(1)  1.이것을 진행하고
 // let target = Array.from(source);  //(2)
