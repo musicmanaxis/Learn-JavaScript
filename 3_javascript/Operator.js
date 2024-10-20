@@ -27,8 +27,8 @@
 
 // let a = 30;
 // let b = '30';
-// console.log(a !== b); // ==> true
-// console.log(a != b); // ==> false
+// console.log(a !== b); //true       === 3개를 쓰면 데이터 타입까지 검사함으로 이것을 권장한다.  !==도 마찬가지...
+// console.log(a != b); // false
 // ===, !==
 
 // let x = 10;
@@ -59,13 +59,14 @@ btn.addEventListener('click', function () {
   let password = passwordEl.value;
   // console.log('email: ', email === '');
   password = null;
-  if (password && password.length === 8) {
+  if (password && password.length === 8) {   //연산판별이 빨리 되는 것은 앞에 위치  ->password
     console.log('성공');
   } else {
     console.log('실패');
   }
   // '' => false => true
-  // if (email === '' || validateEmail(email)) {
+  // if (email === '' || validateEmail(email)) {   
+     //  ||연산은 앞에 것이 빨리 판별되는 것을 적어두는 것이 좋다..||연산은 둘중 하나만 true이면 바로 통과되기 때문에...
   //   console.log('이메일이 유효하지 않습니다.');
   // } else if (!password) {
   //   console.log('비밀번호를 입력해주세요.');
@@ -80,12 +81,12 @@ btn.addEventListener('click', function () {
 
 function validateEmail(email) {
   // .....
-  // 5분
+  // 5분이 걸리는 로직이라고 가정했을 경우...
   return true;
 }
 
 let number = 7;
-let message = number % 2 === 1 ? '홀수 입니다.' : '짝수 입니다.';
+let message = number % 2 === 1 ? '홀수 입니다.' : '짝수 입니다.';   //3항 연산자
 
 // if (number % 2 === 1) {
 //   message = '홀수 입니다.';
