@@ -65,12 +65,14 @@
 //     hobby
 //   }
 // }
+
 //ES5
 // function Person(name, age, hobby) {
 //   this.name = name;
 //   this.age = age;
 //   this.hobby = hobby;
 // }
+
 // ES6
 // class Person {
 //   constructor(name, age, hobby) {
@@ -79,7 +81,7 @@
 //     this.hobby = hobby;
 //   }
 // }
-// const person1 = new Person('김깅동1', 1, '아무거나')    //팩토리함수를 이용해서 객체 생성
+// const person1 = new Person('김깅동1', 1, '아무거나')    //ES5, ES6클래스에서 정의한것은 이런식으로 객체를 생성
 // const person1 = createPerson('김길동1', 1, '아무거나')
 // const person2 = createPerson('김길동2', 1, '아무거나')
 // const person3 = createPerson('김길동3', 1, '아무거나')
