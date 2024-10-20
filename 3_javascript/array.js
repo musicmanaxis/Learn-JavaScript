@@ -62,7 +62,7 @@
 // console.log(strawberry);
 // console.log(others);
 
-// 4] 전개 구문
+// 4] 전개 구문    //  ...을 이용      ...fruit1-> fruit1의 내용을 펼쳐라 라는 뜻
 // let fruits1 = ['사과', '바나나', '딸기'];
 // let fruits2 = ['파인애플', '수박'];
 // let items = [...fruits1, ...fruits2];   //배열을 한번에 다른 배열식으로 할당하는 방법   ...세개 점을 찍으면 배열을 펼친다라는 의미 
