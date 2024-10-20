@@ -23,11 +23,11 @@
 // let result = x + y--;
 // console.log('x: ', x);
 // console.log('y: ', y);
-// console.log('result: ', result);
+// console.log('result: ', result);...
 
 // let a = 30;
 // let b = '30';
-// console.log(a !== b); //true       === 3개를 쓰면 데이터 타입까지 검사함으로 이것을 권장한다.  !==도 마찬가지...
+// console.log(a !== b); //true       === 3개를 쓰면 데이터 타입까지 검사함으로 이것을 권장한다.  !==도 마찬가지.......
 // console.log(a != b); // false
 // ===, !==
 
