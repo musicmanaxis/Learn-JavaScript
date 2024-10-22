@@ -114,21 +114,54 @@
 //   console.log(name);
 // }
 // console.log('=====');
+
+//객체생성
 // const person1 = {
-//   name: '짐코딩',
+//   name: '짐코딩', 
 //   age: 25,
 // };
+
+
 // console.log('name2' in person1);
+
 // if ('name2' in person1) {
 //   console.log('존재 합니다.');
 // } else {
 //   console.log('존재하지 않습니다.');
 // }
-// // let person2 = { ...person1 };
-// let person2 = Object.assign({}, person1);
+
+
+//객체 복사하는 방법->2가지
+// // let person2 = { ...person1 };    
+//1.전개 구문은 참조값을 할당하는 방식이 아닌 객체에서 속성을 펼치는(Spread) 방식이기 때문에 결론적으로 객체 복사가 가능합니다
+
+// let person2 = Object.assign({}, person1);   //{}->1번째 자리는 비워둔다는 의미
+//2.Object.assign() 자바스크립트 내장 객체인 `Object`의 `assign()`메서드를 사용하여 복사할 수 있습니다.
+
+//객체복사 후 출력
 // person2.name = '홍길동';
 // console.log(person1);
 // console.log(person2);
+
+
+
+// 객체의 키값 반복적 반환:for ... in 
+const person3 = {
+	name: '홍길동',
+	age: 20,
+	job: '개발자'
+}; 
+for (let key in person3) {
+	console.log(`key: ${key}, value: ${person3[key]}`);
+}
+// [출력]
+// key: name, value: 홍길동
+// key: age, value: 20
+// key: job, value: 개발자
+
+
+
+
 
 // console.log(person);
 // changePersonName(person);
@@ -138,13 +171,19 @@
 //   people.age = 60;
 // }
 
-const person = {
+
+
+//키 존재 여부 확인하는 방법
+const person4 = {
   name: '짐코딩',
 };
-console.log(person.hasOwnProperty('name')); // true
-console.log(Object.hasOwn(person, 'name')); // true
+if ('name' in person4) {   //'name' in person4 ->이런식으로 키를 조회할 수 있다
+  console.log('person4의 이름이 정의되어 있습니다.');
+}
+console.log(person4.hasOwnProperty('name')); // true
+console.log(Object.hasOwn(person4, 'name')); // true
 
-console.log(person.name2);
-if (person.name2) {
+console.log(person4.name);
+if (person4.name) {   //person4.name ->이런식으로 가능
   console.log('true~~~');
 }
