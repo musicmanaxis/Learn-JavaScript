@@ -60,8 +60,7 @@ console.log('5. 90점 이상 학생을 구하시요.')
  //////////////////////////////////////////////////
  console.log('6. 등록한 학생만 배열로 만드시오')
  console.log('정답:배열의 함수중 filter를 이용하면 새로운 배열로 받는다==========')
- const enrolledStudents=students.filter((s)=>s.enrolled)
- enrolledStudents.forEach((s)=>console.log(s))
+ console.log(students.filter((s)=>s.enrolled))
  
  console.log('내가 작성한 것==========')
  for(let i=0;i<students.length;i++ ){
@@ -73,4 +72,5 @@ console.log('5. 90점 이상 학생을 구하시요.')
 
  //////////////////////////////////////////////////
  console.log('7. 학생배열에서 점수만 뽑아서 점수배열로 만드시오')
-
+console.log('정답:배열의 함수중 map을 이용하면 새로운 배열로 받는다==========')
+console.log( students.map((s)=>s.name+':'+s.score))
